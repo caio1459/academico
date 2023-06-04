@@ -29,11 +29,11 @@
             <label for="bairroId" class="form-label">Bairro</label>
             <input name="bairro" th:value="${aluno.bairro}" type="text" class="form-control" id="bairroId">
 
-            <label for="cepId" class="form-label col-6">CEP</label>
+            <label for="cepId" class="form-label">CEP</label>
             <input name="cep" th:value="${aluno.cep}" type="text" class="form-control" id="cepId">
 
             <label class="form-label">Curso de Interesse</label>
-            <select th:field="*{aluno.curso.id}" class="form-control col-6">
+            <select th:field="*{aluno.curso.id}" class="form-control">
                 <option value=""selected="selected">Selecione</option>
                 <option th:each="curso: ${listaDeCursos}" th:value="${curso.id}" th:text="${curso.nome}"></option>
             </select>
